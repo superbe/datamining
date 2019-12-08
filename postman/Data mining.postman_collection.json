@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "976f9505-ce75-4ee4-9a57-011c3e9d629f",
+		"name": "Data mining",
+		"description": "Задания по курсу \"Методы сбора и обработки данных из сети Интернет\"",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GitHub",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.nebula-preview+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/users/superbe/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"users",
+						"superbe",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
