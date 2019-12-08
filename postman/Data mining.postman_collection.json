@@ -7,6 +7,108 @@
 	},
 	"item": [
 		{
+			"name": "OpenStreetMap",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456_Qe",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "super_be",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openstreetmap.org/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openstreetmap",
+								"org"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": "Корневой запрос с авторизацией"
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456_Qe",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "super_be",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.openstreetmap.org/api/0.6/user/details/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openstreetmap",
+								"org"
+							],
+							"path": [
+								"api",
+								"0.6",
+								"user",
+								"details",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "123456_Qe",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "super_be",
+						"type": "string"
+					}
+				]
+			}
+		},
+		{
 			"name": "GitHub",
 			"request": {
 				"method": "GET",

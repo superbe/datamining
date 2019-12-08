@@ -1,0 +1,23 @@
+<?xml version="1.0" ?><osm attribution="http://www.openstreetmap.org/copyright" copyright="OpenStreetMap and contributors" generator="OpenStreetMap server" license="http://opendatacommons.org/licenses/odbl/1-0/" version="0.6">
+<user account_created="2012-09-11T17:52:15Z" display_name="super_be" id="876296">
+  <description/>
+  <contributor-terms agreed="true" pd="true"/>
+  <img href="https://www.gravatar.com/avatar/e370bdf57840941de14e268c62a7bfd8.jpg?s=100&amp;d=https%3A%2F%2Fapi.openstreetmap.org%2Fassets%2Favatar_large-5e8ed4ed1b354312795dbde18c77b3c3206285b342e94d0d7e07c8611f56804a.png"/>
+  <roles>
+  </roles>
+  <changesets count="3"/>
+  <traces count="0"/>
+  <blocks>
+    <received active="0" count="0"/>
+  </blocks>
+  <home lat="58.02904" lon="56.32896" zoom="3"/>
+  <languages>
+    <lang>ru-RU</lang>
+    <lang>ru</lang>
+  </languages>
+  <messages>
+    <received count="0" unread="0"/>
+    <sent count="0"/>
+  </messages>
+</user>
+</osm>
