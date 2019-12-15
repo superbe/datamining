@@ -17,6 +17,6 @@ class MarketDB:
 
 
 if __name__ == '__main__':
-    db_url = 'mysql+mysqldb:///localhost'
+    db_url = 'mysql:///localhost.mysql'
     db = MarketDB(Base, db_url)
     print(1)
