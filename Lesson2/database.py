@@ -1,8 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models.category import Base
+from sqlalchemy.ext.declarative import declarative_base
 from models.category import Category
+from models.subcategory import Subcategory
 
+Base = declarative_base()
 
 class MarketDB:
     def __init__(self, base, db_url):
@@ -17,6 +19,5 @@ class MarketDB:
 
 
 if __name__ == '__main__':
-    db_url = 'mysql:///localhost.mysql'
+    db_url = 'sqlite:///marketplace.sqlite'
     db = MarketDB(Base, db_url)
-    print(1)

@@ -6,11 +6,14 @@ Base = declarative_base()
 
 
 class Subcategory(Base):
-    __tablename__ = 'Subategories'
+    __tablename__ = 'Subcategories'
     id = Column(Integer, primary_key=True, autoincrement=True)
-    Code = Column(String, unique=True)
-    Name = Column(String)
+    code = Column(String, unique=True)
+    name = Column(String)
+    __category = Column(Integer, ForeignKey('Category.id'))
+    category = relationships('Category', backref='Subcategories')
 
-    def __init__(self, code: str, name: str):
-        self.Code = code
-        self.Name = name
+    def __init__(self, code: str, name: str, category):
+        self.code = code
+        self.name = name
+        self.category = category
