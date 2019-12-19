@@ -11,7 +11,7 @@ class Subcategory(Base):
     code = Column(String, unique=True)
     name = Column(String)
     __category = Column(Integer, ForeignKey('Category.id'))
-    category = relationships('Category', backref='Subcategories')
+    # category = relationships('Category', backref='Subcategories')
 
     def __init__(self, code: str, name: str, category):
         self.code = code

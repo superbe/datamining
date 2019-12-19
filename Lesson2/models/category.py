@@ -1,8 +1,6 @@
 from sqlalchemy import (Table, Column, ForeignKey, String, Integer)
 from sqlalchemy.orm import relationships
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from common import Base
 
 
 class Category(Base):

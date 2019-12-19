@@ -2,7 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from models.category import Category
-from models.subcategory import Subcategory
+import common
+# from models.subcategory import Subcategory
 
 Base = declarative_base()
 
