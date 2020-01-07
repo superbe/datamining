@@ -109,6 +109,354 @@
 			}
 		},
 		{
+			"name": "5ka.ru",
+			"item": [
+				{
+					"name": "Категории",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v2/categories/",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v2",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Подкатегории",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v2/categories/PUI3/",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v2",
+								"categories",
+								"PUI3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Акции по дефолту",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v2/special_offers/?store=&records_per_page=100&page=1&categories=&ordering=&price_promo__gte=&price_promo__lte=&search=",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v2",
+								"special_offers",
+								""
+							],
+							"query": [
+								{
+									"key": "store",
+									"value": ""
+								},
+								{
+									"key": "records_per_page",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "categories",
+									"value": ""
+								},
+								{
+									"key": "ordering",
+									"value": ""
+								},
+								{
+									"key": "price_promo__gte",
+									"value": ""
+								},
+								{
+									"key": "price_promo__lte",
+									"value": ""
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Акции по магазину",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v2/special_offers/?store=3939&records_per_page=100&page=1&ordering=&price_promo__gte=&price_promo__lte=&search=",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v2",
+								"special_offers",
+								""
+							],
+							"query": [
+								{
+									"key": "store",
+									"value": "3939"
+								},
+								{
+									"key": "records_per_page",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "ordering",
+									"value": ""
+								},
+								{
+									"key": "price_promo__gte",
+									"value": ""
+								},
+								{
+									"key": "price_promo__lte",
+									"value": ""
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Товар по дефолту",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v2/special_offers/10989/",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v2",
+								"special_offers",
+								"10989",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Товар по магазину",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v2/special_offers/25920/?store=3939",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v2",
+								"special_offers",
+								"25920",
+								""
+							],
+							"query": [
+								{
+									"key": "store",
+									"value": "3939"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Регионы",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/regions/",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"regions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Москва",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v1/cities/1814",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cities",
+								"1814"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Питер",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v1/cities/1814",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cities",
+								"1814"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Звенигород",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v1/cities/1814",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cities",
+								"1814"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Москва магазины",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5ka.ru/api/v2/stores/?bbox=57.98584123788119,56.142745004638684,58.03504178822772,56.31612299536135",
+							"protocol": "https",
+							"host": [
+								"5ka",
+								"ru"
+							],
+							"path": [
+								"api",
+								"v2",
+								"stores",
+								""
+							],
+							"query": [
+								{
+									"key": "bbox",
+									"value": "57.98584123788119,56.142745004638684,58.03504178822772,56.31612299536135"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Питер магазины",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Звенигород магазины",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "ДЗ. Урок 2."
+		},
+		{
 			"name": "GitHub",
 			"request": {
 				"method": "GET",
