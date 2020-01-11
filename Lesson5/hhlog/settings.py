@@ -46,7 +46,6 @@ DEFAULT_REQUEST_HEADERS = {
     'Accept-Language': 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
     'Accept-Encoding': 'gzip, deflate, br',
     'Connection': 'keep-alive',
-    'Referer': 'https://www.avito.ru',
 }
 
 # Enable or disable spider middlewares
