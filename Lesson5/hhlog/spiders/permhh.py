@@ -29,13 +29,11 @@ class PermhhSpider(scrapy.Spider):
 
         item.add_value('url', response.url)
         item.add_value('parse_date', datetime.now())
-        item.add_xpath('title', '//h1[contains(@data-qa, "vacancy-title")]/text()')
-        item.add_xpath('salary',
-                       '//div[contains(@class, "vacancy-title ")]/p[contains(@class, "vacancy-salary")]/text()')
+        item.add_xpath('title', '//h1[contains(@data-qa, "vacancy-title")]')
+        item.add_xpath('salary', '//p[contains(@class, "vacancy-salary")]')
         item.add_xpath('organisation',
-                       '//p[contains(@class, "vacancy-company-name-wrapper")]/a[contains(@class, "vacancy-company-name")]/span[contains(@itemprop, "name")]/text()')
-        item.add_xpath('organisation_url',
-                       '//p[contains(@class, "vacancy-company-name-wrapper")]/a[contains(@class, "vacancy-company-name")]/@href')
+                       '//a[contains(@class, "vacancy-company-name")]/span[contains(@itemprop, "name")]')
+        item.add_xpath('organisation_url', '//a[contains(@class, "vacancy-company-name")]/@href')
         item.add_xpath('description', '//div[contains(@data-qa, "vacancy-description")]')
 
         yield item.load_item()
