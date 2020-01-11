@@ -3,7 +3,6 @@ import scrapy
 from scrapy.http import HtmlResponse
 from Lesson5.hhlog.items import HhlogItem
 from scrapy.loader import ItemLoader
-from datetime import datetime
 
 
 class PermhhSpider(scrapy.Spider):
@@ -28,7 +27,6 @@ class PermhhSpider(scrapy.Spider):
         item = ItemLoader(HhlogItem(), response)
 
         item.add_value('url', response.url)
-        item.add_value('parse_date', datetime.now())
         item.add_xpath('title', '//h1[contains(@data-qa, "vacancy-title")]')
         item.add_xpath('salary', '//p[contains(@class, "vacancy-salary")]')
         item.add_xpath('organisation',
