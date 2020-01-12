@@ -4,7 +4,8 @@ import re
 import json
 from scrapy.http import HtmlResponse
 from urllib.parse import urlencode
-
+# https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables={"id":"11751898","include_reel":true,"fetch_mutual":false,"first":24}
+# https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables={"id":"11751898","include_reel":true,"fetch_mutual":true,"first":190}
 
 class InstagramSpider(scrapy.Spider):
     name = 'instagram'
