@@ -4,6 +4,8 @@ import re
 import json
 from scrapy.http import HtmlResponse
 from urllib.parse import urlencode
+
+
 # https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables={"id":"11751898","include_reel":true,"fetch_mutual":false,"first":24}
 # https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables={"id":"11751898","include_reel":true,"fetch_mutual":true,"first":190}
 
@@ -18,6 +20,8 @@ class InstagramSpider(scrapy.Spider):
     parse_user = ['gefestart']
     graphql_url = 'https://www.instagram.com/graphql/query/?'
     user_data_hash = 'c9100bf9110dd6361671f113dd02e7d6'
+    user_data_hash_followers = 'c76146de99bb02f6415203be841dd25a'
+    user_data_hash_following = 'd04b0a864b4b54837c0d870b0e77e076'
 
     def parse(self, response: HtmlResponse):
         csrf_token = self.fetch_csrf_token(response.text)
@@ -28,7 +32,6 @@ class InstagramSpider(scrapy.Spider):
             formdata={'username': self.user_login, 'password': self.user_password},
             headers={'X-CSRFToken': csrf_token}
         )
-        print(1)
 
     def user_parse(self, response: HtmlResponse):
         j_body = json.loads(response.text)
@@ -37,10 +40,21 @@ class InstagramSpider(scrapy.Spider):
 
     def userdata_parse(self, response: HtmlResponse, username):
         user_id = self.fetch_user_id(response.text, username)
+        variables = {
+            'id': user_id,
+            'include_reel': True,
+            'fetch_mutual': True,
+            'first': 9999999999
+        }
+        url_followers = f'{self.graphql_url}query_hash={self.user_data_hash_followers}&variables={json.dumps(variables)}'
+        url_following = f'{self.graphql_url}query_hash={self.user_data_hash_following}&variables={json.dumps(variables)}'
+        yield response.follow(url_followers, callback=self.followers_data_parse, cb_kwargs={'username': username})
+
+    def followers_data_parse(self, response: HtmlResponse, username):
         print(1)
 
     def fetch_csrf_token(self, text):
         return self.regex_token.search(text).group().split(':').pop().replace('"', '')
 
     def fetch_user_id(self, text, username):
-        return json.loads(re.search(r'{\"id\":\"\d+\",\"username\":\"%s\"}' % username,  text).group()).get('id')
+        return json.loads(re.search(r'{\"id\":\"\d+\",\"username\":\"%s\"}' % username, text).group()).get('id')
