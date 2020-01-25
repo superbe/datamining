@@ -29,6 +29,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
+# Ограничение запросов к серверу vk.com не более 20 запросов в секунду. Опытным путем подобрано значение в 0.15
 DOWNLOAD_DELAY = 0.154
 # The download delay setting will honor only one of:
 CONCURRENT_REQUESTS_PER_DOMAIN = 8
